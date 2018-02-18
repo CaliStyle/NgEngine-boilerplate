@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core'
 import { Observable } from 'rxjs/Observable'
-import { NgEngineService } from 'NgEngine'
+import { NgEngineService } from 'ng-engine'
 
 @Component({
   selector: 'app-home',

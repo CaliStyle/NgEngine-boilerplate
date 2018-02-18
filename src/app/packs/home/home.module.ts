@@ -14,7 +14,7 @@ import { HomeEffects } from './store/effects/home'
     CommonModule,
     SharedModule,
     homeRouter,
-    EffectsModule.forFeature([ HomeEffects ]),
+    // EffectsModule.forFeature([ HomeEffects ]),
   ],
   declarations: [
     HomeComponent

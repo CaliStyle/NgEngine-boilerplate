@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/ng-packagr/ng-package.schema.json",
-  "name": "ngEngine",
+  "name": "ng-engine-boilerplate",
   "version": "1.0.0",
   "licensePath": "LICENSE",
   "lib": {

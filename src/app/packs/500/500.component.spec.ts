@@ -2,7 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing'
 import { RouterTestingModule } from '@angular/router/testing'
 
 // NgEngine Module
-import { NgEngineModule, NgEngineService } from 'NgEngine'
+import { NgEngineModule, NgEngineService } from 'ng-engine'
 // NgEngine Initial State
 import * as ngEngineConfig from '../../root/app.ng-engine-config'
 // 500 Component

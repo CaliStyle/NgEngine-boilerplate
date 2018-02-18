@@ -1,4 +1,4 @@
-import { NgPack} from 'NgEngine'
+import { NgPack} from 'ng-engine'
 import * as CONFIG from './config'
 import * as PKG from './package.json'
 import { ACTIONS, EFFECTS, REDUCERS } from './store'

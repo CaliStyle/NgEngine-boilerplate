@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core'
-import { NgEngineService } from 'NgEngine'
+import { NgEngineService } from 'ng-engine'
 
 
 @Component({

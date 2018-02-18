@@ -3,11 +3,15 @@ import { HttpClientModule } from '@angular/common/http'
 import { NgModule } from '@angular/core'
 import { RouterModule } from '@angular/router'
 
+// Shim up NGRX for now
+import { StoreModule } from '@ngrx/store'
+import { EffectsModule } from '@ngrx/effects'
+
 // NgEngine Initial State
 import * as ngEngineConfig from './app.ng-engine-config'
 
 // NgEngine for NgPacks
-import { NgEngineModule } from 'NgEngine'
+import { NgEngineModule } from 'ng-engine'
 // Routing Module
 import { AppRoutingModule } from './app.routing.module'
 // Root Component
@@ -41,6 +45,8 @@ Object.assign(ngEngineConfig.NG_ENGINE_TOKEN, ngEngineConfig.INITIAL_NG_ENGINE)
     AppRoutingModule,
     BrowserAnimationsModule,
     SharedModule,
+    // StoreModule.forRoot({}),
+    // EffectsModule.forRoot([]),
     NgEngineModule.forRoot(ngEngineConfig.NG_ENGINE_TOKEN),
     environment.production ? ServiceWorkerModule.register('/ngsw-worker.js') : []
   ],

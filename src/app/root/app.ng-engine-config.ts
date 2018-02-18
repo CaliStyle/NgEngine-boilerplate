@@ -1,5 +1,5 @@
 import { InjectionToken } from '@angular/core'
-import { NgEngineConfiguration } from 'NgEngine'
+import { NgEngineConfiguration } from 'ng-engine'
 
 // Environment Stub from  angular cli
 import { environment } from '../../environments/environment'

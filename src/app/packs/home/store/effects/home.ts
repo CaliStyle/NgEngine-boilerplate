@@ -9,7 +9,7 @@ import { catchError, map, mergeMap } from 'rxjs/operators'
 import { defer } from 'rxjs/observable/defer'
 import { tap } from 'rxjs/operators'
 
-import { NgEngineService } from 'NgEngine'
+import { NgEngineService } from 'ng-engine'
 
 @Injectable()
 export class HomeEffects {
