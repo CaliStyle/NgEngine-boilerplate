@@ -3,15 +3,18 @@ import { HttpClientModule } from '@angular/common/http'
 import { NgModule } from '@angular/core'
 import { RouterModule } from '@angular/router'
 
-// Shim up NGRX for now
+// Import NGRX
 import { StoreModule } from '@ngrx/store'
 import { EffectsModule } from '@ngrx/effects'
+import { StoreRouterConnectingModule } from '@ngrx/router-store'
+import { StoreDevtoolsModule } from '@ngrx/store-devtools'
 
-// NgEngine Initial State
-import * as ngEngineConfig from './app.ng-engine-config'
+import * as fromRootReducers from './store/reducers'
+// import * as fromRootActions from './store/actions'
+import * as fromRootEffects from './store/effects'
 
 // NgEngine for NgPacks
-import { NgEngineModule } from 'ng-engine'
+import { NgEngineModule, ENGINE_CONFIG } from 'ng-engine'
 // Routing Module
 import { AppRoutingModule } from './app.routing.module'
 // Root Component
@@ -26,10 +29,8 @@ import { ServiceWorkerModule } from '@angular/service-worker'
 
 // Environment shim from CLI
 import { environment } from '../../environments/environment'
-
-// NgEngine AOT WORKAROUND HERE
-Object.assign(ngEngineConfig.NG_ENGINE_TOKEN, ngEngineConfig.INITIAL_NG_ENGINE)
-// NgEngine AOT WORKAROUND HERE
+// App Config for NgEngine
+import * as appConfig from '../../appConfig'
 
 @NgModule({
   declarations: [
@@ -45,13 +46,24 @@ Object.assign(ngEngineConfig.NG_ENGINE_TOKEN, ngEngineConfig.INITIAL_NG_ENGINE)
     AppRoutingModule,
     BrowserAnimationsModule,
     SharedModule,
-    // StoreModule.forRoot({}),
-    // EffectsModule.forRoot([]),
-    NgEngineModule.forRoot(ngEngineConfig.NG_ENGINE_TOKEN),
+    StoreModule.forRoot(fromRootReducers.reducers),
+    EffectsModule.forRoot([]),
+    StoreRouterConnectingModule,
+    StoreDevtoolsModule.instrument({
+      maxAge: 25,
+      logOnly: environment.production
+    }),
+    NgEngineModule,
     environment.production ? ServiceWorkerModule.register('/ngsw-worker.js') : []
   ],
   providers: [
-    ngEngineConfig.ngEngineProvider
+    {
+      provide: ENGINE_CONFIG,
+      useValue: {
+        environment: environment,
+        appConfig: appConfig
+      }
+    }
   ],
   bootstrap: [
     AppComponent
