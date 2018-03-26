@@ -1,5 +1,5 @@
 import { Routes, RouterModule } from '@angular/router'
-import { FourZeroFourComponent } from './404.component'
+import { FourZeroFourComponent } from './containers/404/404.component'
 
 export const ROUTES: Routes = [
   {

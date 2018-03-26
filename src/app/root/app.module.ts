@@ -15,10 +15,15 @@ import * as fromRootEffects from './store/effects'
 
 // NgEngine for NgPacks
 import { NgEngineModule, ENGINE_CONFIG } from 'ng-engine'
+// Environment shim from CLI
+import { environment } from '../../environments/environment'
+// App Config for NgEngine
+import * as appConfig from '../../appConfig'
+
 // Routing Module
 import { AppRoutingModule } from './app.routing.module'
 // Root Component
-import { AppComponent } from './app.component'
+import { AppComponent } from './containers/app/app.component'
 // Shared Module
 import { SharedModule } from '../shared/shared.module'
 // For Material
@@ -26,11 +31,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 
 // Service Worker
 import { ServiceWorkerModule } from '@angular/service-worker'
-
-// Environment shim from CLI
-import { environment } from '../../environments/environment'
-// App Config for NgEngine
-import * as appConfig from '../../appConfig'
 
 @NgModule({
   declarations: [

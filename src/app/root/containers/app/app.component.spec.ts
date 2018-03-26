@@ -9,12 +9,12 @@ import { EffectsModule } from '@ngrx/effects'
 
 import { NgEngineModule, NgEngineService, ENGINE_CONFIG } from 'ng-engine'
 // Environment shim from CLI
-import { environment } from '../../environments/environment'
+import { environment } from '../../../../environments/environment'
 // App Config for NgEngine
-import * as appConfig from '../../appConfig'
+import * as appConfig from '../../../../appConfig'
 
 // Shared Module
-import { SharedModule } from '../shared/shared.module'
+import { SharedModule } from '../../../shared/shared.module'
 // For Material
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 

@@ -6,11 +6,13 @@ An Angular CLI, Angular Universal, [Trails](https://trailsjs.io/), and [Proxy En
 
 Do you need to use Angular 5+ with Server Side Rendering (SSR) and an advanced node.js framework? This is the boiler plate for you!
 
+Looking for [NgEngine?](https://github.com/CaliStyle/ngengine) 
+
 ## Features
  - Angular 5 (+ Angular CLI)
  - Server Side Rendering (Universal)
  - Advanced Node.js Backend (Node.js)
- - Advanced Angular Configuration (NgEngine + NgPacks)
+ - [Advanced Angular Configuration (NgEngine + NgPacks)](https://github.com/CaliStyle/ngengine)
  - Angular Material
  - Service Workers (PWA)
 
@@ -23,6 +25,9 @@ For Trails documentation see the [Trails Website](https://trailsjs.io).  The onl
 
 ## Angular
 For Angular documentation see the [Angular Website](https://angular.io).  You can configure your NgEngine Angular app through `src/appConfig`. 
+
+## NgEngine
+For NgEngine documentation and to learn how "packs" work, see the [NgEngine Repo](https://github.com/CaliStyle/ngengine).
 
 # Running your Application
 

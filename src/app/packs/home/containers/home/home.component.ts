@@ -4,8 +4,8 @@ import { Store, select } from '@ngrx/store'
 
 import { NgEngineService } from 'ng-engine'
 
-import * as home from './store/actions/home'
-import * as fromHome from './store/reducers'
+import * as home from '../../store/actions/home'
+import * as fromHome from '../../store/reducers'
 
 @Component({
   selector: 'app-home',

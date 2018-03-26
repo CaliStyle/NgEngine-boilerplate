@@ -3,8 +3,8 @@ import { NgEngineService } from 'ng-engine'
 import { Observable } from 'rxjs/Observable'
 
 import { Store, select } from '@ngrx/store'
-import * as app from './store/actions/app'
-import * as fromApp from './store/reducers'
+import * as app from '../../store/actions/app'
+import * as fromApp from '../../store/reducers'
 
 
 @Component({

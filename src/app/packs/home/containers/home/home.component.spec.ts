@@ -5,15 +5,15 @@ import { StoreModule, combineReducers, Store } from '@ngrx/store'
 // NgEngine Module
 import { NgEngineModule, NgEngineService, ENGINE_CONFIG } from 'ng-engine'
 // Environment shim from CLI
-import { environment } from '../../../environments/environment'
+import { environment } from '../../../../../environments/environment'
 // App Config for NgEngine
-import * as appConfig from '../../../appConfig'
+import * as appConfig from '../../../../../appConfig'
 
 // Home Component
 import { HomeComponent } from './home.component'
 
-import * as home from './store/actions/home'
-import * as fromHome from './store/reducers'
+import * as home from '../../store/actions/home'
+import * as fromHome from '../../store/reducers'
 
 describe('HomeComponent', () => {
   let store: Store<fromHome.State>

@@ -5,20 +5,20 @@ import { ModuleMapLoaderModule } from '@nguniversal/module-map-ngfactory-loader'
 import { APP_BASE_HREF } from '@angular/common'
 // NgEngine for NgPacks
 import { NgEngineModule, ENGINE_CONFIG } from 'ng-engine'
+// Environment shim from CLI
+import { environment } from '../../environments/environment'
+import * as appConfig from '../../appConfig'
+
 // Root Module
 import { AppModule } from './app.module'
 // Root Component
-import { AppComponent } from './app.component'
+import { AppComponent } from './containers/app/app.component'
 // Route Module
 import { AppRoutingModule } from './app.routing.module'
 // Shared Module
 import { SharedModule } from '../shared/shared.module'
 // For Material
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
-
-// Environment shim from CLI
-import { environment } from '../../environments/environment'
-import * as appConfig from '../../appConfig'
 
 // Import NGRX
 import { StoreModule } from '@ngrx/store'

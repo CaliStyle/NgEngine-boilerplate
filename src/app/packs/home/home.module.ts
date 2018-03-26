@@ -4,7 +4,7 @@ import { StoreModule } from '@ngrx/store'
 import { EffectsModule } from '@ngrx/effects'
 
 import { SharedModule } from '../../shared/shared.module'
-import { HomeComponent } from './home.component'
+import { HomeComponent } from './containers/home/home.component'
 import { homeRouter } from './home.router'
 
 // Effects for Pack
